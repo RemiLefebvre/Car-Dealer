@@ -1,0 +1,37 @@
+#addVehiculeBar{
+  display: none;
+}
+.addVehicule{
+  cursor: pointer;
+}
+
+th{
+  min-width: 200px;
+}
+
+main{
+  margin-top: 100px;
+}
+
+
+body, html {
+  width: 100%;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+
+header{
+  position: fixed;
+  margin-top: 50px;
+}
+header .navbar{
+  padding: 0;
+
+}
+#logo{
+  width: 130px;
+}
