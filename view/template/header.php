@@ -97,28 +97,3 @@
 
         </nav>
   </header>
-  <!--
-<div class="">
- <ul class="navbar-nav">
- <form class="" action="index.php" method="post">
- <li class="pr-5 nav-item active">
- <input type="text" name="name" placeholder="Name" required>
-</li>
-<li class="pr-5 nav-item active">
-<input type="text" name="model" placeholder="Modele" required>
-</li>
-<li class="pr-5 nav-item active">
-<input type="text" name="detail" placeholder="Detail" required>
-</li>
-<li class="pr-5 nav-item d-flex flex-row ">
-<select name="type" class="nav-link custom-select" required>
-<option class="pr-4" selected>Type</option>
-<option value="truck">Truck</option>
-<option value="car">Car</option>
-<option value="moto">Moto</option>
-</select>
-<input type="submit" name="add" value="Add">
-</li>
-</form>
-</ul>
-</div> -->
