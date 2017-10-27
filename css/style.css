@@ -27,15 +27,12 @@ img{
 ** START!
 */
 
-/*background-image: url("https://c.wallhere.com/photos/7d/ea/art_chevrolet_car_canon_vintage_french_photography_eos-509017.jpg!d");
-background-size: cover ;
-background-position: bottom;
-*/
 
 /*1*/
 header{
   height: 70px;
   background-color: white;
+  box-shadow: 0px 1px 3px 0px grey;
 }
 h1{
   position: absolute;
@@ -50,9 +47,12 @@ h1{
 h1 span{
   font-size: 15px;
 }
+
+.one , .two , .three, .foor,.foor::after, .five, .six, .seven ,.height,.menu{
+  position: absolute;
+}
 /*1*/
 .one{
-  position: absolute;
   top: 0;
   right: 0;
   width: 70px;
@@ -61,7 +61,6 @@ h1 span{
 }
 /*2*/
 .two{
-  position: absolute;
   right: 70px;
   top: 0;
   height: 70px;
@@ -70,13 +69,26 @@ h1 span{
 }
 /*menu*/
 .menu{
-
+  top: 15px;
+  right: 40px;
 }
-
+.menu li{
+  list-style-type: none;
+  color: white;
+}
+.menu li a{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  font-family: 'Contrail One', cursive;
+}
+.menu li:hover{
+  list-style-type:  circle;
+}
 /*3*/
 .three{
   z-index: 10;
-  position: absolute;
   right: 90px;
   top: 15px;
   height: 0;
@@ -88,7 +100,6 @@ h1 span{
 /*4*/
 .foor{
   z-index: 10;
-  position: absolute;
   right: 130px;
   top: 15px;
   height: 0;
@@ -97,21 +108,29 @@ h1 span{
   border-left: 40px solid transparent;
   transition: 0.4s;
 }
+.foor::after{
+  content: "Menu";
+  left: -25px;
+  top: -40px;
+  transform: rotate(55deg);
+  color: white;
+  font-family: Pacifico;
+  font-size: 20px;
+}
 /*5*/
 .five{
   z-index: 9;
-  position: absolute;
   height: 55px;
-  width: 200px;
+  width: 100vw;
   right: 130px;
   top: 15px;
-  background-image: url("https://c.wallhere.com/photos/7d/ea/art_chevrolet_car_canon_vintage_french_photography_eos-509017.jpg!d");
+  background-image: url("../img/bgVehicule.jpg");
+  background-position: right;
   background-size: cover;
   transition: 0.4s;
 }
 /*six*/
 .six{
-  position: absolute;
   top: 0;
   right: 70px;
   height: 0;
@@ -121,7 +140,6 @@ h1 span{
 }
 /*seven*/
 .seven{
-  position: absolute;
   right: 0px;
   top: 0px;
   height: 55px;
@@ -130,7 +148,6 @@ h1 span{
 }
 /*height*/
 .height{
-  position: absolute;
   right: 55px;
   top: 0px;
   height: 0;

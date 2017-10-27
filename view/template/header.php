@@ -10,6 +10,8 @@
 
   <!-- Font family -->
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
+
 
   <!-- Fontawersome -->
   <script src="https://use.fontawesome.com/4d141429f4.js"></script>
@@ -34,7 +36,14 @@
 <header class="fixed-top">
   <h1>Car <br><span>Dealer</span></h1>
   <div class="one"></div>
-  <div class="two"></div>
+  <div class="two">
+    <nav class="menu">
+      <ul>
+        <li><a href="index.php">Listing</a></li>
+        <li><a class="addVehicule" href="#">Add Vehicule</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="three"></div>
   <div class="foor"></div>
   <div class="five"></div>
@@ -42,8 +51,6 @@
   <div class="seven"></div>
   <div class="height"></div>
   <div class="nine"></div>
-
-
 </header>
 <!-- ADD VEHICULE BAR -->
 <nav class="navbar bg-faded" id="addVehiculeBar">
