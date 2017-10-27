@@ -1,6 +1,4 @@
-#addVehiculeBar{
-  display: none;
-}
+
 .addVehicule{
   cursor: pointer;
 }
@@ -32,9 +30,12 @@ img{
 header{
   height: 70px;
   background-color: white;
-  box-shadow: 0px 1px 3px 0px grey;
+  box-shadow: 0px 1px 3px 0px black;
+}
+.navHeader{
 }
 h1{
+  z-index: 5;
   position: absolute;
   top: 0;
   right: 0;
@@ -42,7 +43,7 @@ h1{
   padding: 10px;
   text-align: right;
   line-height: 16px;
-  font-family: Pacifico;
+  font-family: 'Lobster', cursive;
 }
 h1 span{
   font-size: 15px;
@@ -53,6 +54,7 @@ h1 span{
 }
 /*1*/
 .one{
+  z-index: 5;
   top: 0;
   right: 0;
   width: 70px;
@@ -61,6 +63,7 @@ h1 span{
 }
 /*2*/
 .two{
+  z-index: 5;
   right: 70px;
   top: 0;
   height: 70px;
@@ -75,13 +78,15 @@ h1 span{
 .menu li{
   list-style-type: none;
   color: white;
+  line-height: 24px;
 }
 .menu li a{
   color: white;
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
-  font-family: 'Contrail One', cursive;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 28px;
 }
 .menu li:hover{
   list-style-type:  circle;
@@ -109,13 +114,16 @@ h1 span{
   transition: 0.4s;
 }
 .foor::after{
-  content: "Menu";
+  content: "menu";
   left: -25px;
-  top: -40px;
+  top: -45px;
   transform: rotate(55deg);
   color: white;
   font-family: Pacifico;
-  font-size: 20px;
+  /*font-family: 'Contrail One', cursive;*/
+  font-family: 'Lobster', cursive;
+
+  font-size: 26px;
 }
 /*5*/
 .five{
@@ -131,6 +139,7 @@ h1 span{
 }
 /*six*/
 .six{
+  z-index: 6;
   top: 0;
   right: 70px;
   height: 0;
@@ -140,6 +149,7 @@ h1 span{
 }
 /*seven*/
 .seven{
+  z-index: 7;
   right: 0px;
   top: 0px;
   height: 55px;
@@ -148,6 +158,7 @@ h1 span{
 }
 /*height*/
 .height{
+  z-index: 7;
   right: 55px;
   top: 0px;
   height: 0;
@@ -166,7 +177,37 @@ header:hover .five{
   right: 250px;
 
 }
-polygon{
-  z-index: 10;
-  position: absolute;
+#addVehiculeBar{
+  /*display: none;*/
+  padding: 0;
+  z-index: 4;
+  width: 100%;
+  top: 70px;
+}
+#addVehiculeBar .banner{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 70vh;
+  position: relative;
+  margin: auto;
+  margin-top: 0;
+  padding-bottom: 10px;
+  width: 70%;
+  background-color: #142D31;
+  color: white;
+  border-bottom: 15px solid #C2272D;
+}
+#addVehiculeBar .banner h2{
+  padding: 15px;
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 48px;
+}
+.btnAdd{
+  background-color: #8B0E0E;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 28px;
+}
+.btnAdd:hover{
+  background-color: #C2272D;
 }
