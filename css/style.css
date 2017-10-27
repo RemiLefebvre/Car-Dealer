@@ -23,15 +23,133 @@ img{
   width: 100%;
 }
 
+/*
+** START!
+*/
 
+/*background-image: url("https://c.wallhere.com/photos/7d/ea/art_chevrolet_car_canon_vintage_french_photography_eos-509017.jpg!d");
+background-size: cover ;
+background-position: bottom;
+*/
+
+/*1*/
 header{
-  position: fixed;
-  margin-top: 50px;
+  height: 70px;
+  background-color: white;
 }
-header .navbar{
-  padding: 0;
+h1{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  padding: 10px;
+  text-align: right;
+  line-height: 16px;
+  font-family: Pacifico;
+}
+h1 span{
+  font-size: 15px;
+}
+/*1*/
+.one{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #142D31;
+}
+/*2*/
+.two{
+  position: absolute;
+  right: 70px;
+  top: 0;
+  height: 70px;
+  width: 100vw;
+  background-color: #C2272D;
+}
+/*menu*/
+.menu{
 
 }
-#logo{
-  width: 130px;
+
+/*3*/
+.three{
+  z-index: 10;
+  position: absolute;
+  right: 90px;
+  top: 15px;
+  height: 0;
+  width: 0;
+  border-bottom: 55px solid #8B0E0E;
+  border-right: 40px solid transparent;
+  transition: 0.4s;
+}
+/*4*/
+.foor{
+  z-index: 10;
+  position: absolute;
+  right: 130px;
+  top: 15px;
+  height: 0;
+  width: 0;
+  border-top: 55px solid #8B0E0E;
+  border-left: 40px solid transparent;
+  transition: 0.4s;
+}
+/*5*/
+.five{
+  z-index: 9;
+  position: absolute;
+  height: 55px;
+  width: 200px;
+  right: 130px;
+  top: 15px;
+  background-image: url("https://c.wallhere.com/photos/7d/ea/art_chevrolet_car_canon_vintage_french_photography_eos-509017.jpg!d");
+  background-size: cover;
+  transition: 0.4s;
+}
+/*six*/
+.six{
+  position: absolute;
+  top: 0;
+  right: 70px;
+  height: 0;
+  width: 0;
+  border-top: 70px solid #142D31;
+  border-left: 50px solid transparent;
+}
+/*seven*/
+.seven{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  background-color: white;
+}
+/*height*/
+.height{
+  position: absolute;
+  right: 55px;
+  top: 0px;
+  height: 0;
+  width: 0;
+  border-top: 55px solid white;
+  border-left: 40px solid transparent;t;
+}
+header:hover .three {
+  right: 210px;
+}
+header:hover .foor {
+  right: 250px;
+
+}
+header:hover .five{
+  right: 250px;
+
+}
+polygon{
+  z-index: 10;
+  position: absolute;
 }
