@@ -3,7 +3,24 @@
         $(".addVehicule").click(function(){
           $("#addVehiculeBar").slideToggle();
         });
+        var oui;
 
+
+        $('.firstVehicles').click(function(){
+          if (oui) {
+            oui.children(".optionsArticle").animate({left:"100%"});
+            oui.css("filter","grayscale(0%)");
+          }
+          oui=$(this);
+          oui.css("filter","grayscale(100%)");
+          oui.children(".optionsArticle").css("left","-100%");
+          oui.children(".optionsArticle").animate({left:"20%"});
+        });
+
+        $('.firstVehicles').mouseout(function(){
+          // $(this).children(".optionsArticle").animate({left:"100%"});
+
+        });
       </script>
 
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

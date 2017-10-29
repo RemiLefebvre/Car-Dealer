@@ -2,7 +2,7 @@
 
 <main class="container-fluid ">
 
-  <section class="row">
+  <section class="row threeFirst">
     <article class="firstVehicles col-md-4 col-sm-12">
       <h3>R21</h3>
       <img src="" alt="">
@@ -31,9 +31,30 @@
         <i class="fa fa-trash-o" aria-hidden="true"></i>
       </div>
     </article>
+
 
   </section>
+  <section class="row secondFirst">
+    <article class="firstVehicles col-md-6 col-sm-12">
+      <h3>R21</h3>
+      <img src="" alt="">
+      <div class="optionsArticle">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </div>
+    </article>
 
+    <article class="firstVehicles col-md-6 col-sm-12">
+      <h3>R21</h3>
+      <img src="" alt="">
+      <div class="optionsArticle">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </div>
+    </article>
+  </section>
 
 
 

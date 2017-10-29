@@ -216,27 +216,52 @@ header:hover .five{
 main{
   margin-top: 70px;
 }
+/*-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+-o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");*/
+/*-webkit-filter: grayscale(0%);*/
+/*filter: gray;*/
 .firstVehicles{
   background-image:url("https://i.pinimg.com/736x/25/c6/96/25c696f5db5a54c4399fefda4c5a9991--automotive-photography-nice-cars.jpg");
   background-size: cover;
   transition: 0.8s;
   padding: 0;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.threeFirst .firstVehicles ,.secondFirst .firstVehicles{
   height: 350px;
-
-  -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -webkit-filter: grayscale(0%);
-
 }
-.firstVehicles:hover{
-  -webkit-filter: grayscale(100%);
-  filter: gray;
+@media (min-width:767px) {
+  .secondFirst .firstVehicles{
+    height: 500px;
+  }
 }
+.firstVehicles h3{
+  color: white;
+  font-weight: bold;
+  font-size: 75px;
+  text-shadow: 0 0 3px black;
+  width: 80%;
+  text-align: center;
+}
+
 .optionsArticle{
-  top: 0;
+  /*top: 0;*/
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 45%;
+  color: white;
+  font-size: 70px;
+  text-shadow: 0 0 2px grey;
+  left: -100%;
+}
+.optionsArticle i{
+  position: relative;
 }
