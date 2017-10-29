@@ -3,8 +3,8 @@
 <main class="container-fluid ">
 
   <section class="row threeFirst">
-    <article class="firstVehicles col-md-4 col-sm-12">
-      <h3>R21</h3>
+    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
+      <h3>Ferrari Enzo</h3>
       <img src="" alt="">
       <div class="optionsArticle">
         <i class="fa fa-search" aria-hidden="true"></i>
@@ -13,7 +13,7 @@
       </div>
     </article>
 
-    <article class="firstVehicles col-md-4 col-sm-12">
+    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
       <h3>R21</h3>
       <img src="" alt="">
       <div class="optionsArticle">
@@ -22,7 +22,7 @@
         <i class="fa fa-trash-o" aria-hidden="true"></i>
       </div>
     </article>
-    <article class="firstVehicles col-md-4 col-sm-12">
+    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
       <h3>R21</h3>
       <img src="" alt="">
       <div class="optionsArticle">
@@ -35,7 +35,7 @@
 
   </section>
   <section class="row secondFirst">
-    <article class="firstVehicles col-md-6 col-sm-12">
+    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-6 col-sm-12">
       <h3>R21</h3>
       <img src="" alt="">
       <div class="optionsArticle">
@@ -45,7 +45,7 @@
       </div>
     </article>
 
-    <article class="firstVehicles col-md-6 col-sm-12">
+    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-6 col-sm-12">
       <h3>R21</h3>
       <img src="" alt="">
       <div class="optionsArticle">

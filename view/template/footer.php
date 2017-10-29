@@ -8,13 +8,15 @@
 
         $('.firstVehicles').click(function(){
           if (oui) {
-            oui.children(".optionsArticle").animate({left:"100%"});
+            oui.children(".optionsArticle").animate({left:"150%"});
             oui.css("filter","grayscale(0%)");
+            oui.children("h3").animate({opacity:"1"});
           }
           oui=$(this);
+          oui.children("h3").animate({opacity:"0"});
           oui.css("filter","grayscale(100%)");
           oui.children(".optionsArticle").css("left","-100%");
-          oui.children(".optionsArticle").animate({left:"20%"});
+          oui.children(".optionsArticle").animate({left:"50%"});
         });
 
         $('.firstVehicles').mouseout(function(){
