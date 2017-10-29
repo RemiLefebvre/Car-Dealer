@@ -1,28 +1,53 @@
 
       <script type="text/javascript">
+
+      // TOOGLE ADDVEHICLE FORM
         $(".addVehicule").click(function(){
-          $("#addVehiculeBar").slideToggle();
+          $(".addVehicleBar").slideToggle();
         });
-        var oui;
+        $(".closeAddVehicule").click(function(){
+          $(".addVehicleBar").slideToggle();
+        });
 
 
+        // TOOGLE MODIFVEHICLE FORM
+        function modifVehicle(name , model, type ,detail,id){
+          $(".modifVehicleBar").slideToggle();
+          $(".modifName").val(name);
+          $(".modifModel").val(model);
+          $(".modifType").val(type);
+          $(".modifType").text(type);
+          $(".modifDetail").attr("placeholder",detail);
+          $(".modifId").val(id);
+        }
+        $(".closeModifVehicule").click(function(){
+          $(".modifVehicleBar").slideToggle();
+        })
+
+        // ANIMATION OPTIONS VEHICLES
+        var articleClicked;
         $('.firstVehicles').click(function(){
-          if (oui) {
-            oui.children(".optionsArticle").animate({left:"150%"});
-            oui.css("filter","grayscale(0%)");
-            oui.children("h3").animate({opacity:"1"});
+          if (articleClicked) {
+            if (articleClicked!=$(this)) {
+              articleClicked.children(".optionsArticle").animate({left:"150%"});
+              articleClicked.css("filter","grayscale(0%)");
+              articleClicked.children("h3").animate({opacity:"1"});
+            }
           }
-          oui=$(this);
-          oui.children("h3").animate({opacity:"0"});
-          oui.css("filter","grayscale(100%)");
-          oui.children(".optionsArticle").css("left","-100%");
-          oui.children(".optionsArticle").animate({left:"50%"});
+          articleClicked=$(this);
+          articleClicked.children("h3").animate({opacity:"0"});
+          articleClicked.css("filter","grayscale(100%)");
+          articleClicked.children(".optionsArticle").css("left","-100%");
+          articleClicked.children(".optionsArticle").animate({left:"50%"});
         });
 
-        $('.firstVehicles').mouseout(function(){
-          // $(this).children(".optionsArticle").animate({left:"100%"});
+          $('.firstVehicles').mouseout(function(){
+            // $(this).children(".optionsArticle").animate({left:"100%"});
 
-        });
+          });
+
+          function bite(){
+          }
       </script>
 
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

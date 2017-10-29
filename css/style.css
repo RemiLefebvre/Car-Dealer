@@ -116,10 +116,7 @@ h1 span{
   top: -45px;
   transform: rotate(55deg);
   color: white;
-  font-family: Pacifico;
-  /*font-family: 'Contrail One', cursive;*/
   font-family: 'Lobster', cursive;
-
   font-size: 26px;
 }
 /*5*/
@@ -174,14 +171,14 @@ header:hover .five{
   right: 250px;
 
 }
-#addVehiculeBar{
+.formVehicleBar{
   display: none;
   padding: 0;
   z-index: 4;
   width: 100%;
   top: 70px;
 }
-#addVehiculeBar .banner{
+.formVehicleBar .banner{
   overflow-y: scroll;
   overflow-x: hidden;
   height: 70vh;
@@ -194,18 +191,22 @@ header:hover .five{
   color: white;
   border-bottom: 15px solid #C2272D;
 }
-#addVehiculeBar .banner h2{
+.formVehicleBar .banner h2{
   padding: 15px;
   font-weight: bold;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 48px;
 }
-.btnAdd{
+.formVehicleBar input{
+  color: black;
+}
+header .btn{
+  margin-right: 5px;
   background-color: #8B0E0E;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 28px;
 }
-.btnAdd:hover{
+header .btn:hover{
   background-color: #C2272D;
 }
 
@@ -249,6 +250,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><
   text-shadow: 0 0 2px black;
   width: 80%;
   text-align: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 4px;
+
 }
 
 .optionsArticle{
@@ -261,10 +265,18 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><
   text-shadow: 0 0 2px grey;
   left: -100%;
 }
-.optionsArticle i{
+.optionsArticle button{
+  background-color: transparent;
+  border: none;
+  padding: 0;
   position: relative;
+}
+.optionsArticle i{
   text-shadow: 0 0 3px black;
 }
-.optionsArticle i:hover{
+.optionsArticle button:hover{
   top: -5px;
 }
+/*.optionsArticle i:hover{
+  top: -5px;
+}*/

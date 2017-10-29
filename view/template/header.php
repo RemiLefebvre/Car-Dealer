@@ -52,10 +52,10 @@
       <div class="seven"></div>
       <div class="height"></div>
       <div class="nine"></div>
-
     </nav>
+
     <!-- ADD VEHICULE BAR -->
-    <div class="navbar" id="addVehiculeBar">
+    <div class="navbar formVehicleBar addVehicleBar">
       <div class="banner">
         <h2 class="" href="#">Add vehicle</h2>
         <div class="container">
@@ -87,13 +87,65 @@
                   <div class="col-md-12">
                     <button type="submit" class="btnAdd btn pull-right">
                         Add
-                      </button>
+                    </button>
+                    <button type="button" class="closeAddVehicule btn pull-right">
+                      Cancel
+                    </button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        </nav>
+    <!-- MIDIF VEHICULE BAR -->
+    <div class="navbar formVehicleBar modifVehicleBar">
+      <div class="banner">
+        <h2 class="" href="#">Modif vehicle</h2>
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-12">
+              <form action="index.php" method="post" enctype="multipart/form-data">
+                <input class="modifId" type="hidden" name="id" value="0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="modifName" name="Name" type="text" class="form-control" value"" required="required" />
+                    </div>
+                    <div class="form-group">
+                      <input class="modifModel" name="model" type="text" class="form-control" placeholder="Model" required="required" />
+                    </div>
+                    <select name="type" class="nav-link custom-select" required>
+                        <option class="modifType" value="oui" class="pr-4" selected>Type</option>
+                        <option value="">---</option>
+                        <option value="truck">Truck</option>
+                        <option value="car">Car</option>
+                        <option value="moto">Moto</option>
+                      </select>
+                    <p class="mb-0 mt-5 w-100"><strong>Add picture</strong></p>
+                    <input class="mb-3 " name="image" type="file" value="Parcourir..">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <textarea name="detail" class="modifDetail form-control" rows="9" cols="25" required="required" placeholder="Detail"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btnAdd btn pull-right">
+                        Add
+                    </button>
+                    <button type="button" class="closeModifVehicule btn pull-right">
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </header>

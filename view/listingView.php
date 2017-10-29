@@ -1,59 +1,40 @@
 <?php require_once("template/header.php"); ?>
 
 <main class="container-fluid ">
-
   <section class="row threeFirst">
-    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
-      <h3>Ferrari Enzo</h3>
-      <img src="" alt="">
-      <div class="optionsArticle">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </div>
-    </article>
-
-    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
-      <h3>R21</h3>
-      <img src="" alt="">
-      <div class="optionsArticle">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </div>
-    </article>
-    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-4 col-sm-12">
-      <h3>R21</h3>
-      <img src="" alt="">
-      <div class="optionsArticle">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </div>
-    </article>
-
-
+    <?php for ($i=0; $i <3 ; $i++) {
+      ?>
+      <article class="firstVehicles col-md-4 col-sm-12">
+        <h3><?php echo $vehicules[$i]->name()?></h3>
+        <img src="" alt="">
+        <div class="optionsArticle">
+          <form class="" action="index.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $vehicules[$i]->id()?>">
+            <button type="button" name="supp"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="button" onclick="modifVehicle('<?php echo $vehicules[$i]->name()."','".$vehicules[$i]->model()."','". $vehicules[$i]->type()."','". $vehicules[$i]->detail()."','". $vehicules[$i]->id()?>')" name="supp"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            <button type="submit" name="supp"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </article>
+      <?php
+    } ?>
   </section>
   <section class="row secondFirst">
-    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-6 col-sm-12">
-      <h3>R21</h3>
-      <img src="" alt="">
-      <div class="optionsArticle">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </div>
-    </article>
-
-    <article style:"background-image:url('<?php ?>')" class="firstVehicles col-md-6 col-sm-12">
-      <h3>R21</h3>
-      <img src="" alt="">
-      <div class="optionsArticle">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </div>
-    </article>
+    <?php if (isset($vehicules[4])): ?>
+    <?php for ($i=3; $i <5 ; $i++) {
+      ?>
+        <article class="firstVehicles col-md-6 col-sm-12">
+          <h3><?php echo $vehicules[$i]->name()?></h3>
+          <img src="" alt="">
+          <div class="optionsArticle">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </div>
+        </article>
+    <?php
+  } ?>
+<?php endif; ?>
   </section>
 
 
