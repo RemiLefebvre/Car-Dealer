@@ -12,12 +12,17 @@
 
         // TOOGLE MODIFVEHICLE FORM
         function modifVehicle(name , model, type ,detail,sourceImg,id){
+
+          function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+          }
+          var oui = capitalizeFirstLetter(type);
           $(".modifVehicleBar").slideToggle();
           $(".modifName").val(name);
           $(".modifModel").val(model);
-          $(".modifType").val(type);
-          $(".modifType").text(type);
-          $(".modifDetail").attr("placeholder",detail);
+          $(".modifType").val(oui);
+          $(".modifType").text(oui);
+          $(".modifDetail").val(detail);
           $(".modifImg").attr("src",sourceImg);
           $(".modifId").val(id);
         }

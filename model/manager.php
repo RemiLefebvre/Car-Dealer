@@ -91,12 +91,10 @@ class VehiculeManager{
   public function getFirstVehicle(){
     $firstVehicules = [];
 
-    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle ORDER BY vehicules.id DESC LIMIT 0,5');
+    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle ORDER BY vehicules.id DESC ');
 
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
-
-      // service createVehicule
-      $firstVehicules[] = createVehicule(["id" => $donnees['id'],"name" => $donnees['name'],"model" => $donnees['model'],"detail" => $donnees['detail'],"type" => $donnees['type'],"sourceImg" => $donnees['sourceImg']]);
+      $firstVehicules[] = new $donnees['type'](["id" => $donnees['idVehicle'],"name" => $donnees['name'],"model" => $donnees['model'],"detail" => $donnees['detail'],"sourceImg" => $donnees['sourceImg']]);
     }
     return $firstVehicules;
   }
@@ -114,6 +112,15 @@ class VehiculeManager{
       'detail'=>$vehicule->detail(),
       'name'=>$vehicule->name()
     ));
+
+    if ($vehicule->sourceImg()!= NULL) {
+      $q = $this->_db->prepare('UPDATE imgVehicles SET sourceImg = :sourceImg WHERE idVehicle = :id');
+
+      $q->execute(array(
+        'sourceImg'=>$vehicule->sourceImg(),
+        'id'=>$vehicule->id()
+      ));
+    }
   }
 
   /*

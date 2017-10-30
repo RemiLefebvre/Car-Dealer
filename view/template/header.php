@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Titre</title>
+  <title>Car Dealer</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -113,7 +113,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input class="modifName" name="Name" type="text" class="form-control" value"" required="required" />
+                      <input class="modifName" name="name" type="text" class="form-control" value"" required="required" />
                     </div>
                     <div class="form-group">
                       <input class="modifModel" name="model" type="text" class="form-control" placeholder="Model" required="required" />
@@ -131,12 +131,12 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <textarea name="detail" class="modifDetail form-control" rows="9" cols="25" required="required" placeholder="Detail"></textarea>
+                      <input name="detail" type="text" class="modifDetail form-control pb-5" required="required" value="Detail">
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="btnAdd btn pull-right">
-                        Add
+                    <button type="submit" name="validModif" class="btnAdd btn pull-right">
+                        Valid
                     </button>
                     <button type="button" class="closeModifVehicule btn pull-right">
                       Cancel
