@@ -65,18 +65,18 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="Name" type="text" class="form-control" placeholder="Name" required="required" />
+                      <input name="name" type="text" class="form-control" placeholder="Name" required="required" />
                     </div>
                     <div class="form-group">
                       <input name="model" type="text" class="form-control" placeholder="Model" required="required" />
                     </div>
                     <select name="type" class="nav-link custom-select" required>
                         <option class="pr-4" selected>Type</option>
-                        <option value="truck">Truck</option>
-                        <option value="car">Car</option>
-                        <option value="moto">Moto</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Car">Car</option>
+                        <option value="Moto">Moto</option>
                       </select>
-                    <p class="mb-0 mt-5 w-100"><strong>Change picture</strong></p>
+                    <p class="mb-0 mt-5 w-100"><strong>Add picture</strong></p>
                     <input class="mb-3 " name="image" type="file" value="Parcourir..">
                   </div>
                   <div class="col-md-6">
@@ -85,6 +85,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
+                    <input type="hidden" name="add" value="true">
                     <button type="submit" class="btnAdd btn pull-right">
                         Add
                     </button>
@@ -120,9 +121,9 @@
                     <select name="type" class="nav-link custom-select" required>
                         <option class="modifType" value="oui" class="pr-4" selected>Type</option>
                         <option value="">---</option>
-                        <option value="truck">Truck</option>
-                        <option value="car">Car</option>
-                        <option value="moto">Moto</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Car">Car</option>
+                        <option value="Moto">Moto</option>
                       </select>
                     <p class="mb-0 mt-5 w-100"><strong>Modif picture</strong></p>
                     <img class="modifImg" src="img/carDealerCar.jpg" width="200px" alt="">

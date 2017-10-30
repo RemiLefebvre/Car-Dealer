@@ -32,6 +32,15 @@ class VehiculeManager{
       'model'=>$vehicule->model(),
       'detail'=>$vehicule->detail()
     ));
+
+    $lastId=$this->_db->lastInsertId();
+
+    $q = $this->_db->prepare('INSERT INTO imgVehicles(sourceImg,idVehicle) VALUES(:sourceImg, :idVehicle)');
+    $q->execute(array(
+      'sourceImg'=>$vehicule->sourceImg(),
+      'idVehicle'=>$lastId
+    ));
+
   }
 
   /*
@@ -82,7 +91,7 @@ class VehiculeManager{
   public function getFirstVehicle(){
     $firstVehicules = [];
 
-    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle LIMIT 0,5');
+    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle ORDER BY vehicules.id DESC LIMIT 0,5');
 
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
 
