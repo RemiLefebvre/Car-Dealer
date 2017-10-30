@@ -77,6 +77,22 @@ class VehiculeManager{
   }
 
   /*
+  **Get 5 firstVehicles
+  */
+  public function getFirstVehicle(){
+    $firstVehicules = [];
+
+    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle LIMIT 0,5');
+
+    while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+
+      // service createVehicule
+      $firstVehicules[] = createVehicule(["id" => $donnees['id'],"name" => $donnees['name'],"model" => $donnees['model'],"detail" => $donnees['detail'],"type" => $donnees['type'],"sourceImg" => $donnees['sourceImg']]);
+    }
+    return $firstVehicules;
+  }
+
+  /*
   **Update vehicule
   */
   public function update(Vehicule $vehicule){

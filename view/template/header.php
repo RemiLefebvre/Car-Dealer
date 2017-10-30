@@ -76,7 +76,7 @@
                         <option value="car">Car</option>
                         <option value="moto">Moto</option>
                       </select>
-                    <p class="mb-0 mt-5 w-100"><strong>Add picture</strong></p>
+                    <p class="mb-0 mt-5 w-100"><strong>Change picture</strong></p>
                     <input class="mb-3 " name="image" type="file" value="Parcourir..">
                   </div>
                   <div class="col-md-6">
@@ -124,7 +124,8 @@
                         <option value="car">Car</option>
                         <option value="moto">Moto</option>
                       </select>
-                    <p class="mb-0 mt-5 w-100"><strong>Add picture</strong></p>
+                    <p class="mb-0 mt-5 w-100"><strong>Modif picture</strong></p>
+                    <img class="modifImg" src="img/carDealerCar.jpg" width="200px" alt="">
                     <input class="mb-3 " name="image" type="file" value="Parcourir..">
                   </div>
                   <div class="col-md-6">

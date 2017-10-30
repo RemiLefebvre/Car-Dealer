@@ -9,6 +9,7 @@
    protected $_type;
    protected $_model;
    protected $_detail;
+   protected $_sourceImg;
 
    public function __construct(array $donnees){
      $this->hydrate($donnees);
@@ -32,6 +33,7 @@
    public function type() { return $this->_type; }
    public function model() { return $this->_model; }
    public function detail() { return $this->_detail; }
+   public function sourceImg() { return $this->_sourceImg; }
 
 
    /*
@@ -53,7 +55,11 @@
        $this->_detail = $detail;
      }
    }
-
+   public function setSourceImg($sourceImg){
+     if (is_string($sourceImg)){
+       $this->_sourceImg = $sourceImg;
+     }
+   }
  }
 
 

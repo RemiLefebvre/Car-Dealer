@@ -1,7 +1,7 @@
 
       <script type="text/javascript">
 
-      // TOOGLE ADDVEHICLE FORM
+        // TOOGLE ADDVEHICLE FORM
         $(".addVehicule").click(function(){
           $(".addVehicleBar").slideToggle();
         });
@@ -11,13 +11,14 @@
 
 
         // TOOGLE MODIFVEHICLE FORM
-        function modifVehicle(name , model, type ,detail,id){
+        function modifVehicle(name , model, type ,detail,sourceImg,id){
           $(".modifVehicleBar").slideToggle();
           $(".modifName").val(name);
           $(".modifModel").val(model);
           $(".modifType").val(type);
           $(".modifType").text(type);
           $(".modifDetail").attr("placeholder",detail);
+          $(".modifImg").attr("src",sourceImg);
           $(".modifId").val(id);
         }
         $(".closeModifVehicule").click(function(){
@@ -46,11 +47,10 @@
 
           });
 
-          function bite(){
-          }
+
       </script>
 
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+      <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script> -->
 
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
