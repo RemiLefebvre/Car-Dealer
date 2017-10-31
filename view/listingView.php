@@ -71,15 +71,19 @@
               <td><?php echo $vehicule->type() ?></td>
               <td><?php echo $vehicule->model() ?></td>
               <td><?php echo $vehicule->detail() ?></td>
-              <td class="d-flex">
-                <input type="hidden" name="id" value="<?php  echo $vehicule->id()?>">
-                <button class="btn" type="submit" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
-                <button class="btn" type="button" onclick="modifVehicle('<?php echo $vehicule->name()."','".$vehicule->model()."','". $vehicule->type()."','". $vehicule->detail()."','". $vehicule->sourceImg()."','". $vehicule->id()?>')">
-                  modif
-                </button>
-                <button class="btn" onclick="if(!confirm('Delete this vehicle ?')) return false;" type="submit" name="supp">
-                  Delete
-                </button>
+              <td class="">
+                <div class="d-flex">
+                  <input type="hidden" name="id" value="<?php  echo $vehicule->id()?>">
+                  <button class="btn" type="submit" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  <button class="btn" type="button" onclick="modifVehicle('<?php echo $vehicule->name()."','".$vehicule->model()."','". $vehicule->type()."','". $vehicule->detail()."','". $vehicule->sourceImg()."','". $vehicule->id()?>')">
+                    modif
+                  </button>
+                  <button class="btn" onclick="if(!confirm('Delete this vehicle ?')) return false;" type="submit" name="supp">
+                    Delete
+                  </button>
+                </div>
+                <div style="background-image:url('<?php echo $vehicule->sourceImg()?>')" class="imgVehiclesTable">
+                </div>
               </td>
             </form>
             <!-- <div class="imgVehiclesTable">

@@ -74,12 +74,12 @@ class VehiculeManager{
   public function getList($info){
     $listVehicule = [];
 
-    $q = $this->_db->query('SELECT id, name, detail, model ,type FROM vehicules  ORDER BY '.$info);
+    $q = $this->_db->query('SELECT * FROM vehicules LEFT JOIN imgVehicles ON vehicules.id=imgVehicles.idVehicle ORDER BY vehicules.id DESC');
 
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
 
       // service createVehicule
-      $listVehicule[] = createVehicule(["id" => $donnees['id'],"name" => $donnees['name'],"model" => $donnees['model'],"detail" => $donnees['detail'],"type" => $donnees['type']]);
+      $listVehicule[] = createVehicule(["id" => $donnees['idVehicle'],"name" => $donnees['name'],"model" => $donnees['model'],"detail" => $donnees['detail'],"type" => $donnees['type'],"sourceImg" => $donnees['sourceImg']]);
 
     }
     return $listVehicule;
