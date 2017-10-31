@@ -3,9 +3,6 @@
   cursor: pointer;
 }
 
-th{
-  min-width: 200px;
-}
 
 main{
   margin-top: 100px;
@@ -222,8 +219,8 @@ main{
   margin-top: 70px;
 }
 .firstVehicles{
-  background-image:url("https://i.pinimg.com/736x/25/c6/96/25c696f5db5a54c4399fefda4c5a9991--automotive-photography-nice-cars.jpg");
   background-size: cover;
+  background-position: center;
   transition: 0.8s;
   padding: 0;
   position: relative;
@@ -298,7 +295,40 @@ main{
 }
 #tableSection table{
   color: white;
+  /*margin-left: 30px;*/
 }
-#tableSection table input{
-  color: black;
+#tableSection table thead{
+  font-size: 26px;
+}
+#tableSection table th{
+  min-width: 150px;
+  border-bottom: 3px dashed #8B0E0E;
+}
+#tableSection table tbody tr{
+  transition: 0.2s;
+  height: 50px ;
+  font-weight: bold;
+}
+#tableSection table tbody tr:hover{
+  height: 100px ;
+  background-color: #8B0E0E;
+}
+#tableSection table tbody tr:hover button{
+  background-color: #142D31;
+  margin-top: 20px;
+}
+#tableSection table button{
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #8B0E0E;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+}
+#tableSection table button:hover{
+  box-shadow: 0 0 5px #142D31;
+}
+#tableSection .imgVehiclesTable{
+  background-color: white;
+  width: 300px;
+  height: 100px;
 }
