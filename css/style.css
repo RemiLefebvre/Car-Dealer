@@ -287,6 +287,7 @@ main{
   background-color: #142D31;
   width: 100%;
   padding: 20px;
+  padding: 120px 30px;
 }
 #tableSection h2{
   color: white;
@@ -331,4 +332,55 @@ main{
   background-color: white;
   width: 300px;
   height: 100px;
+}
+/*footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.footerUp{
+  /*background-color: rgba(255, 255, 255,0.8) !important;*/
+  color: white;
+
+  background-color: #142D31 !important;
+}
+.bg-primary {
+ background-color: #0d1e21 !important;
+}
+
+.bg-circle
+{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 14px 4px;
+  color: #ececec;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.bg-circle-outline
+{
+  width: 50px;
+  height: 50px;
+  /*color:smoke;*/
+  padding: 8px 2px;
+  border: 2px solid;
+  border-color: smoke;
+  border-radius: 50%;
+}
+
+
+.bg-circle a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+.bg-circle-outline a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+footer h4{
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 30px;
 }
