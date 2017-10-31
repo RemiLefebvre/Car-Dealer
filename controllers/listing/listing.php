@@ -50,7 +50,7 @@ if (isset($_POST['validModif'])){
 
             }
             else {
-              $message="imf extention false";
+              $message="img extention false";
             }
           }
           else {
@@ -68,7 +68,7 @@ if (isset($_POST['validModif'])){
           $modifVehicule= new $modifType(["id" => $modifId,"name" => $modifName,"model" => $modifModel,"detail" => $modifDetail]);
 
           $manager->update($modifVehicule);
-          // $message=$modifVehicule;
+          $message="success";
 
         }
       }

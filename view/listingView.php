@@ -12,9 +12,9 @@
         <div class="optionsArticle">
           <form class="" action="index.php" method="post">
             <input type="hidden" name="id" value="<?php echo $firstVehicules[$i]->id()?>">
-            <button type="button" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="submit" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
             <button type="button" onclick="modifVehicle('<?php echo $firstVehicules[$i]->name()."','".$firstVehicules[$i]->model()."','". $firstVehicules[$i]->type()."','". $firstVehicules[$i]->detail()."','". $firstVehicules[$i]->sourceImg()."','". $firstVehicules[$i]->id()?>')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-            <button type="submit" name="supp"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            <button onclick="if(!confirm('Delete this vehicle ?')) return false;" type="submit" name="supp"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
           </form>
         </div>
       </article>
@@ -25,14 +25,14 @@
     <?php if (isset($vehicules[4])): ?>
     <?php for ($i=3; $i <5 ; $i++) {
       ?>
-        <article class="firstVehicles col-md-6 col-sm-12">
+        <article class="firstVehicles col-md-6 col-sm-12" style="background-image:url('<?php echo $firstVehicules[$i]->sourceImg()?>')">
           <h3><?php echo $firstVehicules[$i]->name()?></h3>
           <div class="optionsArticle">
             <form class="" action="index.php" method="post">
               <input type="hidden" name="id" value="<?php echo $firstVehicules[$i]->id()?>">
-              <button type="button" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <button type="submit" name="detailVehicule"><i class="fa fa-search" aria-hidden="true"></i></button>
               <button type="button" onclick="modifVehicle('<?php echo $firstVehicules[$i]->name()."','".$firstVehicules[$i]->model()."','". $firstVehicules[$i]->type()."','". $firstVehicules[$i]->detail()."','". $firstVehicules[$i]->sourceImg()."','". $firstVehicules[$i]->id()?>')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-              <button type="submit" name="supp"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+              <button onclick="if(!confirm('Delete this vehicle ?')) return false;" type="submit" name="supp"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
             </form>
           </div>
         </article>
@@ -42,10 +42,11 @@
   </section>
 
 
+</main>
+<div class="separate">
 
-
-
-
+</div>
+<section id="tableSection">
   <?php if (isset($message)) {
     echo "Error: " .$message;
   } ?>
@@ -62,7 +63,7 @@
     <tbody>
       <?php foreach ($vehicules as $vehicule) {
         // if the vehicule select to modif
-       if (isset($_POST['modif']) && isset($_POST['id']) && $vehicule->id()==$_POST['id']) {
+        if (isset($_POST['modif']) && isset($_POST['id']) && $vehicule->id()==$_POST['id']) {
           ?>
           <tr>
             <form action="index.php" method="post">
@@ -89,10 +90,10 @@
               <td><?php echo $vehicule->model() ?></td>
               <td><?php echo $vehicule->detail() ?></td>
               <td class="d-flex flex-row">
-                  <input type="hidden" name="id" value="<?php  echo $vehicule->id()?>">
-                  <input class"ml-3 btn btn-primary" type="submit" name="modif" value="Modif">
-                  <input class"ml-3 btn btn-success" type="submit" name="detailVehicule" value="Detail">
-                  <input class"ml-3 btn btn-danger" type="submit" name="supp" value="Delete">
+                <input type="hidden" name="id" value="<?php  echo $vehicule->id()?>">
+                <input class"ml-3 btn btn-primary" type="submit" name="modif" value="Modif">
+                <input class"ml-3 btn btn-success" type="submit" name="detailVehicule" value="Detail">
+                <input class"ml-3 btn btn-danger" type="submit" name="supp" value="Delete">
               </td>
             </form>
           </tr>
@@ -101,5 +102,6 @@
       } ?>
     </tbody>
   </table>
-</main>
+
+</section>
 <?php require_once("template/footer.php"); ?>
